@@ -1,0 +1,95 @@
+
+Login.html 
+ 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Login</title> 
+    <style> 
+        /* General Styles */ 
+body { 
+    font-family: 'Arial', sans-serif; 
+    background-color: #1a1a1a; /* Dark background for the entire page */ 
+    color: #fff; /* White text color */ 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; /* Full height to center the content */ 
+    margin: 0; /* Remove default margin */ 
+} 
+ 
+h1 { 
+    margin-bottom: 20px; 
+    text-align: center; 
+    font-size: 2.5em; /* Larger heading */ 
+    color: #ff6347; /* Primary color for the heading */ 
+} 
+ 
+form { 
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background 
+*/ 
+    padding: 30px; 
+    border-radius: 10px; /* Rounded corners */ 
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.5); /* Subtle shadow */ 
+    width: 300px; /* Fixed width for the form */ 
+    display: flex; 
+    flex-direction: column; /* Stack form elements vertically */ 
+} 
+ 
+label { 
+    margin-bottom: 10px; /* Space between label and input */ 
+    font-weight: bold; /* Bold label text */ 
+} 
+ 
+input[type="email"] { 
+    padding: 10px; /* Padding inside the input */ 
+    border: 2px solid #ff6347; /* Border color matches primary color */ 
+    border-radius: 5px; /* Rounded corners for input */ 
+    margin-bottom: 20px; /* Space below the input */ 
+    background-color: #fff; /* White background for input */ 
+    color: #000; /* Black text for input */ 
+} 
+ 
+button { 
+    background-color: #ff6347; /* Primary button color */ 
+    color: white; /* White text on button */ 
+    border: none; /* Remove default border */ 
+    border-radius: 5px; /* Rounded corners for button */ 
+    padding: 10px; /* Padding for button */ 
+    cursor: pointer; /* Pointer cursor on hover */ 
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */ 
+} 
+ 
+button:hover { 
+    background-color: #e5534d; /* Darker shade on hover */ 
+    transform: translateY(-2px); /* Slight lift on hover */ 
+} 
+ 
+button:active { 
+    transform: translateY(0); /* Reset lift on button press */ 
+} 
+</style> 
+</head> 
+<body> 
+  <h1>Login</h1> 
+    <form method="POST" action="send_otp.php" 
+onsubmit="saveUserData(event)"> 
+        <label for="username">Username:</label> 
+        <input type="text" id="username" name="username" required> 
+        <label for="email">Email:</label> 
+        <input type="email" id="email" name="email" required> 
+        <button type="submit">Send OTP</button> 
+    </form> 
+ 
+    <script> 
+        function saveUserData(event) { 
+            // Save the username to localStorage when the form is submitted 
+            const username = document.getElementById('username').value; 
+            localStorage.setItem('userUsername', username); // Save username in 
+localStorage 
+        } 
+        </script> 
+</body> 
+</html> 
