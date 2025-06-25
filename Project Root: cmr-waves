@@ -1,0 +1,46 @@
+cmr-waves/
+│
+├── index.html                 # Landing page
+├── login.html                 # Login form with username & email
+├── verify_otp.php            # OTP verification (to be enhanced for input validation)
+├── send_otp.php              # Handles OTP generation and email dispatch
+├── dashboard.html            # User dashboard after login
+│
+├── PHPMailer/                # PHPMailer library (copied from official repo)
+│   ├── Exception.php
+│   ├── PHPMailer.php
+│   ├── SMTP.php
+│   └── ...
+│
+├── css/                      # (Optional) External stylesheets
+│   └── styles.css            # Could extract CSS from inline styles
+│
+├── js/                       # (Optional) JavaScript logic
+│   └── dashboard.js          # Could extract your `<script>` from dashboard
+│
+├── tamil/                    # Tamil audio files
+│   ├── Aaluma-Doluma.mp3
+│   ├── Bhairava Anthem.mp3
+│   └── ...
+│
+├── tamil/ta-image/           # Tamil album artwork
+│   ├── Aaluma-Doluma.jpeg
+│   ├── Bhairava Anthem.jpeg
+│   └── ...
+│
+├── kannada/                  # Kannada audio files
+│   └── *.mp3
+├── images/                   # Album covers for multiple languages
+│   ├── kannada1.jpg
+│   ├── telugu1.jpg
+│   ├── english1.jpg
+│   └── ...
+│
+├── telugu/                   # Telugu audio files
+│   └── *.mp3
+├── malayalam/                # Malayalam audio files
+│   └── *.mp3
+├── english/                  # English audio files
+│   └── *.mp3
+│
+└── README.md                 # Project description/documentation (optional)
