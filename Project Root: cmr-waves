@@ -32,6 +32,55 @@ cmr-waves/
    │   └── english/
    │       └── *.mp3
 
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+             +--------------------+
+             |   index.html       |
+             |  (Landing page)    |
+             +---------+----------+
+                       |
+                       v
+             +--------------------+
+             |   login.html       |
+             | [username + email] |
+             +---------+----------+
+                       |
+                       | Form submit (POST)
+                       v
+             +----------------------+
+             |   send_otp.php       |
+             | [generate OTP +      |
+             |  send email via SMTP]|
+             +---------+------------+
+                       |
+                       | Redirect
+                       v
+             +----------------------+
+             |  verify_otp.php       |
+             | [user enters OTP]     |
+             | [compare with session]|
+             +----------+------------+
+                        |
+           +------------+------------+
+           | OTP match?              |
+           | Yes          No         |
+           v              v
++------------------+    Show error or
+|  dashboard.html  |    resend OTP
+| [Main interface] |
++--------+---------+
+         |
+         v
+User accesses:
+  → Home
+  → Songs by language
+  → Podcasts / Broadcast
+  → Settings / Account info
+
+--------------------------------------------------------------------------------------------------------------------------------
 
 
 
